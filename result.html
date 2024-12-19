@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<body>
+    <h1>Game Result</h1>
+    <p id="winner">Loading...</p>
+    <a href="index.html">홈으로</a>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const winner = urlParams.get('winner');
+
+        if (winner) {
+            document.getElementById('winner').innerText = `The winner is: ${winner}`;
+        } else {
+            document.getElementById('winner').innerText = 'No winner data found.';
+        }
+    </script>
+</body>
+</html>
